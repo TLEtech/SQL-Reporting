@@ -40,7 +40,7 @@ DECLARE @Weekdays Table ([Date] Date, [Day] Varchar(10))
 -- Removing weekends, unless your place of employment hates the sales reps and requires weekend work.
 			WHERE DayName NOT IN ('Saturday', 'Sunday')
 -- Removing holidays.
-			AND [IsHoliday] > 0
+			AND [IsHoliday] = 0
 -- Setting a start year.
 			AND [Year] > 2017
 
