@@ -28,7 +28,7 @@ DECLARE @SaleKeys Table (ItemID VarChar(10), ItemDesc VarChar(50))
 	INSERT INTO @SaleKeys
 		SELECT [ItemID], [ItemDescription]
 		FROM [Server].[Database].[dbo].[ItemSaleTable] -- Generic schema
-		WHERE SaleKey = @SaleStart -- 
+		WHERE SaleKey = @SaleKey -- 
 
 -- Here we will create a Weekdays table that will include all work days (days that are eligible for tracking)
 -- for reference later. 
